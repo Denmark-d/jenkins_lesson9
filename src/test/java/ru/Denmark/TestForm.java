@@ -2,6 +2,8 @@ package ru.Denmark;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -13,8 +15,10 @@ import static com.codeborne.selenide.Selenide.*;
 public class TestForm extends TestBase{
 
     @Test
+    @Owner("Daniia")
     @DisplayName("заполнение формы")
     @Tag("1.1")
+    @Step ("открываем страницу https://demoqa.com/automation-practice-form")
     void firstTest() {
         System.out.println("First Test");
         open("https://demoqa.com/automation-practice-form");
@@ -45,6 +49,7 @@ public class TestForm extends TestBase{
     }
 
     @Test
+    @Owner("Daniia")
     @DisplayName("Проверка наименования на форме")
     @Tag("1.2")
     void checkRegFormName() {
@@ -54,6 +59,7 @@ public class TestForm extends TestBase{
     }
 
     @Test
+    @Owner("Daniia")
     @Disabled
     @DisplayName("Игнорируем тест")
     @Tag("1.3")
