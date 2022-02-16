@@ -8,25 +8,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
-public class TestForm {
-    @BeforeAll
-    static void beforeAll() {
-        {
-            SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-
-            Configuration.baseUrl = "https://demoqa.com";
-            Configuration.browserSize = "1920x1080";
-            Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
-            Configuration.browserCapabilities = capabilities;
-        }
-    }
+public class TestForm extends TestBase{
 
     @Test
     @DisplayName("заполнение формы")
@@ -78,6 +62,8 @@ public class TestForm {
         open("https://demoqa.com/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
     }
+
+
 }
 
 
