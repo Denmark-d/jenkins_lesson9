@@ -63,7 +63,7 @@ public class TestForm extends TestBase {
     }
 
     @Test
-    @Owner("Daniia")
+    @Owner("Daniiaa")
     @Disabled
     @Tag("1.3")
     @DisplayName("Игнорируем тест")
