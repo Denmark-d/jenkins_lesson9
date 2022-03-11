@@ -53,7 +53,7 @@ public class Properties {
     @Tag("properties")
     void someTest6() {
         String browser = System.getProperty("browser", "chrome");
-        String version = System.getProperty("version", "91");
+        String version = System.getProperty("version", "96");
         String browserSize = System.getProperty("browserSize", "300x300");
 
         System.out.println(browser);
