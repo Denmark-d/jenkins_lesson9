@@ -37,17 +37,17 @@ public class TestForm extends TestBase {
         $("[for='hobbies-checkbox-1']").click();
         //$("#uploadPicture").uploadFromClasspath("custom/1 .png");
         $("#currentAddress").setValue("Наметкина");
-        $("#state").scrollTo().click();
-        $("#stateCity-wrapper").$(byText("Uttar Pradesh")).click();
-        $("#city").click();
-        $("#stateCity-wrapper").$(byText("Lucknow")).click();
+        //$("#state").scrollTo().click();
+        //$("#stateCity-wrapper").$(byText("Uttar Pradesh")).click();
+        //$("#city").click();
+        //$("#stateCity-wrapper").$(byText("Lucknow")).click();
         $("#submit").scrollTo().click();
         $(".table table-dark table-striped table-bordered table-hover").isDisplayed();
         step("Проверяем заполненную форму", () -> {
             $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
             $(".table-responsive").shouldHave(text("Danny Dan"), text("Danny@mail.ru"));
             $(".table-responsive").shouldHave(text("8937170312"), text("29 July,1988"), text("history"),
-                    text("Наметкина"), text("Uttar Pradesh Lucknow"));
+                    text("Наметкина"));
         });
 
     }
