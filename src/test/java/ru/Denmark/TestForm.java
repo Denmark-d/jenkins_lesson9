@@ -16,7 +16,7 @@ public class TestForm extends TestBase {
 
     @Test
     @Owner("Daniia")
-    @Tag("test")
+    @Tag("our_tests")
     @DisplayName("заполнение формы")
     void firstTest() {
         step("Открываем страницу", () ->
@@ -54,7 +54,7 @@ public class TestForm extends TestBase {
 
     @Test
     @Owner("Daniia")
-    @Tag("test")
+    @Tag("our_tests")
     @DisplayName("Проверка наименования на форме")
     void checkRegFormName() {
         System.out.println("First Test");
@@ -65,7 +65,7 @@ public class TestForm extends TestBase {
     @Test
     @Owner("Daniiaa")
     @Disabled
-    @Tag("test")
+    @Tag("our_tests")
     @DisplayName("Игнорируем тест")
     void checkRegFormName1() {
         System.out.println("First Test");
